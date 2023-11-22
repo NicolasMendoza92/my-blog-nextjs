@@ -129,7 +129,7 @@ export default function NewPostForm({
                 <Editor value={content} onChange={setContent} />
 
             </div>
-            <button className='bg-blue-600 text-white px-3 py-1 ms-1 mt-1 rounded shadow-sm hover:bg-blue-500' type='sumbit' style={{ marginTop: '5px' }}>Create post</button>
+            <button className='bg-blue-400  text-white px-3 py-1 ms-1 mt-1 rounded shadow-sm hover:bg-blue-300' type='sumbit' style={{ marginTop: '5px' }}>Create post</button>
         </form>
     );
 }

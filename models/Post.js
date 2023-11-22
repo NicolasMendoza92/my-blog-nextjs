@@ -12,6 +12,10 @@ const PostSchema = new Schema({
     type: String,
   },
   cover: [{ type: String }],
+  category: {
+    type: mongoose.Types.ObjectId,
+    ref:'Category',
+  },
   author: {
     type: String,
   },

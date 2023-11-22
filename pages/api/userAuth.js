@@ -1,7 +1,7 @@
 import { mongooseConnect } from "@/lib/mongoose";
-import { getServerSession } from "next-auth";
+import User from "@/models/User";
 import { authOptions } from "./auth/[...nextauth]";
-import Post from "@/models/Post";
+import { getServerSession } from "next-auth";
 
 
 export default async function handler(req, res) {
@@ -12,9 +12,9 @@ export default async function handler(req, res) {
 
     if (method === 'GET') {
         try {
-            const posts = await Post.find({author:session?.user.email})
+            const user = await User.find({email:session?.user.email})
             res.json({
-                posts,
+                user,
             });
         } catch (error) {
             console.log(error);

@@ -1,16 +1,19 @@
 import { mongooseConnect } from "@/lib/mongoose";
 import User from "@/models/User";
 import bcrypt from "bcryptjs";
+import { authOptions } from "./auth/[...nextauth]";
+import { getServerSession } from "next-auth";
 
 
 export default async function handler(req, res) {
   // le pedimos que traiga toda la info que solicito , con req y lo  
   const { method } = req;
+  await mongooseConnect();
+
   if (method === 'POST') {
     const { name, email, password } = req.body;
     try {
       // Revisando q el email sea unico
-      await mongooseConnect();
       let userfind = await User.findOne({ email });
       if (userfind) {
         return res.status(400).send('Ya existe cuenta con este Email');
@@ -40,17 +43,9 @@ export default async function handler(req, res) {
   }
 
   if (method === 'PUT') {
-    const { picture } = req.body;
-    await User.updateOne({ _id }, { picture });
+    const { name, picture, _id } = req.body;
+    await User.updateOne({ _id }, { picture, name });
     res.json(true);
-}
-
-if (method === "GET") {
-  try{
-    const users = await User.find();
-    res.send(users)
-  } catch (error) {
-    res.status(400).send('Hubo un error en la conexion a la base de datos');
   }
-}
+
 }

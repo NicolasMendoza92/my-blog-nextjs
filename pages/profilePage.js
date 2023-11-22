@@ -2,7 +2,6 @@ import Layout from '@/components/Layout'
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 import MyPostCard from '@/components/MyPostCard';
-import Link from 'next/link';
 import { useSession } from 'next-auth/react';
 import { useRouter } from 'next/router';
 import UserInfo from '@/components/UserInfo';
@@ -13,7 +12,7 @@ export default function profilePage() {
 
     const { data: session } = useSession();
     const router = useRouter();
-
+    
     function goToLogin() {
         router.push('/loginPage')
       }
@@ -32,6 +31,7 @@ export default function profilePage() {
             console.log(error)
         }
     }
+
 
     return (
         <Layout>
