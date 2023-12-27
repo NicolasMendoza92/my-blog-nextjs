@@ -29,9 +29,6 @@ export default function UserInfo({ session }) {
     }
   }
 
-  console.log(userLog)
-
-
   return (
     <>
       <div className="text-black flex gap-2 justify-between items-center shadow-md p-4 mb-3">

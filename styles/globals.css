@@ -16,10 +16,10 @@ input, textarea, select {
     @apply uppercase text-blue-600 font-bold text-xl text-center;
   }
   .board-summary{
-    @apply text-gray-500 text-xl text-center;
+    @apply text-gray-800 text-xl text-center;
   }
   .board-data{
-    @apply flex justify-between text-gray-300 text-sm text-center mt-2;
+    @apply flex justify-between text-gray-600 text-sm text-center mt-2;
   }
 
   /* ESTILOS TRADICIONALES */

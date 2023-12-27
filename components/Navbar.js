@@ -21,7 +21,7 @@ export default function Navbar() {
 
     return (
         <>
-            <div className="bg-blue-600 p-4">
+            <div className="bg-gradient-to-b from-blue-800 to-blue-400 p-4">
                 {/* en pantallas grandes se esconde */}
                 <div className='flex justify-between items-center gap-2 md:hidden'>
                     <button onClick={collapseData}>
@@ -46,7 +46,7 @@ export default function Navbar() {
                 </div>
             </div>
             {showNav === true ? (
-                <div className='flex flex-col w-full bg-blue-600 top-0 fixed items-center p-1 md:hidden md:w-auto transition-all z-10 '>
+                <div className='flex flex-col w-full bg-gradient-to-b from-blue-800 to-blue-400 top-0 fixed items-center p-1 md:hidden md:w-auto transition-all z-10 '>
                     <div>
                         <button onClick={collapseData}>
                             <svg xmlns="http://www.w3.org/2000/svg" style={{ color: "white" }} fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8">
