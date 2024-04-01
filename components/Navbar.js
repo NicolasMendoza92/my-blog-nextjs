@@ -29,14 +29,14 @@ export default function Navbar() {
                             <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                         </svg>
                     </button>
-                    <Link href={"/"}>
-                        <img className='h-10' src='https://res.cloudinary.com/dbv6dgwez/image/upload/v1669645478/CV/skills_dn2luc.png'></img>
+                    <Link className='text-white' href={"/"}>
+                        BLOGGER MASTER
                     </Link>
                 </div>
                 {/* en pantallas grandes aparece*/}
                 <div className='flex justify-between items-center gap-2 p-1 max-md:hidden'>
-                    <Link href={"/"} >
-                        <img className='h-10' src='https://res.cloudinary.com/dbv6dgwez/image/upload/v1669645478/CV/skills_dn2luc.png'></img>
+                    <Link className='text-white ' href={"/"} >
+                        BLOGGER MASTER
                     </Link>
                     <Link href={"/profilePage"} className={pathname.includes('/profilePage') ? activeLink : inactiveLink}>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8">
